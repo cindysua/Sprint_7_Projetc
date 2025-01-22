@@ -12,7 +12,7 @@ if build_histogram: # al hacer clic en el botón
 
     st.write('Creación de un histograma para el conjunto de datos de anuncios de venta de coches')  # escribir un mensaje
             
-    fig = px.histogram(car_data, x="odometer", color='country') # crear un histograma
+    fig = px.histogram(car_data, x="odometer") # crear un histograma
         
     st.plotly_chart(fig, use_container_width=True)  # mostrar un gráfico Plotly interactivo
 
@@ -23,7 +23,6 @@ if build_scatter: # al hacer clic en el botón
 
     st.write('Creación de un gráfico de dispersión para el conjunto de datos de anuncios de venta de vehiculos')  # escribir un mensaje
             
-    fig = px.scatter(car_data, x="odometer", y="price", color="species",
-                 size='petal_length', hover_data=['petal_width']) # crear un gráfico de dispersión
+    fig = px.scatter(car_data, x="odometer", y="price") # crear un gráfico de dispersión
         
     st.plotly_chart(fig, use_container_width=True)  # mostrar un gráfico Plotly interactivo
